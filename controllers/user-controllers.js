@@ -32,6 +32,15 @@ const userController = {
                 console.log(err);
                 res.sendStatus(500);
             })
+    },
+
+    createUser({ body }, res) {
+        User.create(body)
+            .then(dbUserData => res.json(dbUserData))
+            .catch(err => {
+                console.log(err);
+                res.sendStatus(500);
+            });
     }
 }
 
