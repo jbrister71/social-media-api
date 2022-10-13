@@ -14,7 +14,7 @@ router
     .get(getThoughtById);
 
 router
-    .route('/:userId')
+    .route('/')
     .post(createThought);
 
 module.exports = router;
